@@ -19,15 +19,30 @@
 //     const random = .sample
 // }
 
+// Delcare initial variables and establish choice array for Computer Selection
 const choices = ["Rock", "Paper", "Scissors"];
-const pcChoice = ""
+let computerSelection = ""
+let playerSelection = ""
 
+// Create Function for computer to choose.=
 function computerPlay(){
-const pcChoice = Math.floor(Math.random() * choices.length);
-console.log(choices[pcChoice]);
+computerSelection = Math.floor(Math.random() * choices.length);
+console.log(computerSelection)
 }
 
+//Run the function and convert Computer Selection to readable format
 computerPlay();
+
+if(computerSelection === 0) {
+    computerSelection = "Rock";
+} else if(computerSelection === 1) {
+    computerSelection = "Paper";
+} else if(computerSelection === 2) {
+    computerSelection = "Scissors";
+}
+
+//Output the choice.
+console.log("The computer chose " + computerSelection)
 
 
 
