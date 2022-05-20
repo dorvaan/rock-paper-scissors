@@ -6,71 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./scripts/app.js"></script>
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-    <script>
-        // Delcare initial variables and establish choice array for Computer Selection
-        const choices = ["Rock", "Paper", "Scissors"];
-        let computerSelection = ""
-
-
-        //Player Selection
-        function playerPlay(choice) {
-            playerSelection = choice
-            console.log("You chose " + playerSelection)
-        }
-
-        // Computer Selection
-        function computerPlay() {
-            computerSelection = Math.floor(Math.random() * choices.length);
-            if (computerSelection === 0) {
-                computerSelection = "Rock";
-            } else if (computerSelection === 1) {
-                computerSelection = "Paper";
-            } else if (computerSelection === 2) {
-                computerSelection = "Scissors";
-            }
-            console.log("The computer chose " + computerSelection)
-        }
-
-        //Rock Choice Winner
-        function outcome() {
-            if (playerSelection === "Rock" && computerSelection === "Paper") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection + ". You Lose")
-            } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection + ". You Win")
-            } else if (playerSelection === "Rock" && computerSelection === "Rock") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection +
-                    ". It's a Draw")
-            } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection + ". You Win")
-            } else if (playerSelection === "Paper" && computerSelection === "Paper") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection +
-                    ". It's a Draw")
-            } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection + ". You Lose")
-            } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection + ". You Lose")
-            } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection + ". You Win")
-            } else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
-                console.log("You chose " + playerSelection + ". The computer chose " + computerSelection +
-                    ". It's a Draw")
-            }
-        }
-    </script>
-
     <div class="game">
         <p class="Heading">Choose your weapon!</p>
         <div class="choices">
 
             <input type="image" src="./images/rock.png" class="btnRock" id="rock"
-                onclick="playerPlay('Rock'); computerPlay(); outcome()">
-            <input type="image" src="./images/paper.png" class="btnPaper" id="paper" onclick="playerPlay('Paper'); computerPlay(); outcome()">
+                onclick="playerChoice('Rock'); computerPlay(); outcome()">
+            <input type="image" src="./images/paper.png" class="btnPaper" id="paper"
+                onclick="playerChoice('Paper'); computerPlay(); outcome()">
             <input type="image" src="./images/scissors.png" class="btnScissors" id="scissors"
-                onclick="playerPlay('Scissors'); computerPlay(); outcome()">
+                onclick="playerChoice('Scissors'); computerPlay(); outcome()">
         </div>
     </div>
 
