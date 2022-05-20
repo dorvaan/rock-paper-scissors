@@ -5,51 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
     <script>
+        // Delcare initial variables and establish choice array for Computer Selection
+        const choices = ["Rock", "Paper", "Scissors"];
+        let computerSelection = ""
 
-// const choices = ["Rock", "Paper", "Scissors"]
-// const compChoice = Math.floor(Math.random() * choices.length);
+        // Create Function for computer to choose.=
+        function computerPlay() {
+            computerSelection = Math.floor(Math.random() * choices.length);
+            console.log(computerSelection)
+        }
 
+        //Run the function and convert Computer Selection to readable format
+        computerPlay();
 
-// function computerPlay(){
-//     const random = .sample
-// }
+        if (computerSelection === 0) {
+            computerSelection = "Rock";
+        } else if (computerSelection === 1) {
+            computerSelection = "Paper";
+        } else if (computerSelection === 2) {
+            computerSelection = "Scissors";
+        }
 
-// Delcare initial variables and establish choice array for Computer Selection
-const choices = ["Rock", "Paper", "Scissors"];
-let computerSelection = ""
-let playerSelection = ""
+        //Output the choice.
+        console.log("The computer chose " + computerSelection)
 
-// Create Function for computer to choose.=
-function computerPlay(){
-computerSelection = Math.floor(Math.random() * choices.length);
-console.log(computerSelection)
-}
-
-//Run the function and convert Computer Selection to readable format
-computerPlay();
-
-if(computerSelection === 0) {
-    computerSelection = "Rock";
-} else if(computerSelection === 1) {
-    computerSelection = "Paper";
-} else if(computerSelection === 2) {
-    computerSelection = "Scissors";
-}
-
-//Output the choice.
-console.log("The computer chose " + computerSelection)
-
-
-
-// computerPlay();
-
-
+        //Player Selection
+        function playerPlay(choice) {
+            playerSelection = choice
+            console.log("You chose " + playerSelection)
+        }
     </script>
+
+    <div class="game">
+        <p class="Heading">Choose your weapon!</p>
+        <div class="choices">
+
+            <input type="image" src="./images/rock.png" class="btnRock" id = "rock" onclick="playerPlay('Rock')">
+            <input type="image" src="./images/paper.png" class="btnPaper" id = "paper" onclick="playerPlay('Paper')">
+            <input type="image" src="./images/scissors.png" class="btnScissors" id = "scissors" onclick="playerPlay('Scissors')">
+        </div>
+    </div>
+
 </body>
 
 </html>

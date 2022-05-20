@@ -1,0 +1,12 @@
+.game {
+    display: flex;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+}
+
+
+img {
+    max-width: 64px;
+}
