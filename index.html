@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./scripts/app.js"></script>
+
     <title>Rock Paper Scissors</title>
 </head>
 
@@ -16,14 +16,17 @@
         <div class="choices">
 
             <input type="image" src="./images/rock.png" class="btnRock" id="rock"
-                onclick="playerChoice('Rock'); computerPlay(); outcome()">
+                onclick="clearMSG(); playerChoice('Rock'); computerPlay(); outcome();">
             <input type="image" src="./images/paper.png" class="btnPaper" id="paper"
-                onclick="playerChoice('Paper'); computerPlay(); outcome()">
+                onclick="clearMSG(); playerChoice('Paper'); computerPlay(); outcome();">
             <input type="image" src="./images/scissors.png" class="btnScissors" id="scissors"
-                onclick="playerChoice('Scissors'); computerPlay(); outcome()">
+                onclick="clearMSG(); playerChoice('Scissors'); computerPlay(); outcome();">
         </div>
+        <div>YOU: <span id="playerScoreTxt"> 0 </span></div>
+        <div>COMPUTER: <span id="compScoreTxt"> 0 </span></div>
+        <div id="outcomeTxt"></div>
     </div>
-
+    <script src="./scripts/app.js"></script>
 </body>
 
 </html>
